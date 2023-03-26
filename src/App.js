@@ -19,13 +19,12 @@ function App() {
   return (
     <Fragment>
       <BrowserRouter>
-        <div className="container">
-          <Routes>
-            <Route exact path="/login" element={!isAuthenticated ? <Login setAuth={setAuth} /> : <Navigate replace to="/dashboard" />} />
-            <Route exact path="/register" element={!isAuthenticated ? <Register setAuth={setAuth} /> : <Navigate replace to="/login" />} />
-            <Route exact path="/dashboard" element={isAuthenticated ? <Dashboard setAuth={setAuth} /> : <Navigate replace to="/login" />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route exact path="/login" element={!isAuthenticated ? <Login setAuth={setAuth} /> : <Navigate replace to="/dashboard" />} />
+          <Route exact path="/register" element={!isAuthenticated ? <Register setAuth={setAuth} /> : <Navigate replace to="/login" />} />
+          <Route exact path="/dashboard" element={isAuthenticated ? <Dashboard setAuth={setAuth} /> : <Navigate replace to="/login" />} />
+        </Routes>
+
       </BrowserRouter>
     </Fragment>
 
