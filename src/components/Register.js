@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react'
+import { Link } from "react-router-dom"
 
 const Register = ({ setAuth }) => {
 
@@ -48,7 +49,7 @@ const Register = ({ setAuth }) => {
           <div class="mb-3">
             <input type="email"
               name="email"
-              placeholder="email"
+              placeholder="Email"
               class="form-control"
               value={email}
               onChange={e => onChange(e)} />
@@ -57,7 +58,7 @@ const Register = ({ setAuth }) => {
             <input
               type="password"
               name="password"
-              placeholder="password"
+              placeholder="Password"
               class="form-control"
               value={password}
               onChange={e => onChange(e)} />
@@ -66,7 +67,7 @@ const Register = ({ setAuth }) => {
             <input
               type="text"
               name="name"
-              placeholder="name"
+              placeholder="Name"
               class="form-control"
               value={name}
               onChange={e => onChange(e)} />
@@ -77,7 +78,7 @@ const Register = ({ setAuth }) => {
               class="btn btn-primary btn-block">
               Submit
             </button>
-
+            <Link to="/login" className='text-decoration-none mt-2 fs-4'>Login</Link>
           </div>
         </form>
 
