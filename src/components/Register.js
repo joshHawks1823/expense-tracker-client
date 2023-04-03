@@ -51,12 +51,14 @@ const Register = ({ setAuth }) => {
               name="email"
               placeholder="Email"
               class="form-control"
+              required
               value={email}
               onChange={e => onChange(e)} />
           </div>
           <div class="mb-3">
             <input
               type="password"
+              required
               name="password"
               placeholder="Password"
               class="form-control"
@@ -67,6 +69,7 @@ const Register = ({ setAuth }) => {
             <input
               type="text"
               name="name"
+              required
               placeholder="Name"
               class="form-control"
               value={name}

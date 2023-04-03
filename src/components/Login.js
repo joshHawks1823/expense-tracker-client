@@ -50,25 +50,27 @@ const Login = ({ setAuth }) => {
             <input type="email"
               name="email"
               placeholder="Email"
-              class="form-control"
+              className="form-control"
               value={email}
+              required
               onChange={e => onChange(e)}
             />
           </div>
-          <div class="mb-3">
+          <div className="mb-3">
             <input
               type="password"
               name="password"
               placeholder="Password"
-              class="form-control"
+              className="form-control"
               value={password}
+              required
               onChange={e => onChange(e)}
             />
           </div>
-          <div class="d-grid">
+          <div className="d-grid">
             <button
               type="submit"
-              class="btn btn-primary btn-block">
+              className="btn btn-primary btn-block">
               Submit
             </button>
             <Link to="/register" className='text-decoration-none mt-2 fs-4'>Register</Link>
